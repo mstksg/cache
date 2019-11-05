@@ -2,6 +2,7 @@ export namespace Inputs {
     export const Key = "key";
     export const Path = "path";
     export const RestoreKeys = "restore-keys";
+    export const CacheLimit = "cache-limit";
 }
 
 export namespace Outputs {
