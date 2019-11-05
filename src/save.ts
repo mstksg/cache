@@ -60,7 +60,7 @@ async function run() {
         core.debug(`File Size: ${archiveFileSize}`);
         if (archiveFileSize > fileSizeLimit) {
             core.warning(
-                `Cache size of ${archiveFileSize} bytes is over the ${configLimit} MB limit, not saving cache.`
+                `Cache size of ${archiveFileSize / 1024 / 1024} MB is over the ${configLimit} MB limit, not saving cache.`
             );
             return;
         }
