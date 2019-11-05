@@ -54,7 +54,7 @@ async function run() {
         core.debug(`Tar Path: ${tarPath}`);
         await exec(`"${tarPath}"`, args);
 
-        const configLimit   = core.getInput(Inputs.CacheLimit) || 200;
+        const configLimit   = Number(core.getInput(Inputs.CacheLimit) || '200');
         const fileSizeLimit = configLimit * 1024 * 1024;
         const archiveFileSize = fs.statSync(archivePath).size;
         core.debug(`File Size: ${archiveFileSize}`);
